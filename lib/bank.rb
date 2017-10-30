@@ -30,4 +30,8 @@ class Bank
     @statement << amount
   end
 
+  def time_stamp(amount)
+    "#{amount} : #{Time.now}"
+  end
+
 end
