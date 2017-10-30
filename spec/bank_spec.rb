@@ -27,7 +27,7 @@ RSpec.describe Bank do
   it "can print a statement with one deposit and one withdrawal" do
     bank.deposit(10)
     bank.withdraw(5)
-    expect(bank.print_statement).to eq([["#{Time.now.strftime("%d/%m/%Y")} || 10 || 10"], ["#{Time.now.strftime("%d/%m/%Y")} || 5 || 5"]])
+    expect(bank.print_statement).to eq([["#{Time.now.strftime("%d/%m/%Y")} || 10 || || 10"], ["#{Time.now.strftime("%d/%m/%Y")} || || 5 || 5"]])
   end
 
   it "initializes with an empty statement" do
@@ -36,13 +36,13 @@ RSpec.describe Bank do
 
   it "can store a deposit in the statement" do
     bank.deposit(10)
-    expect(bank.statement).to eq([["#{Time.now.strftime("%d/%m/%Y")} || 10 || 10"]])
+    expect(bank.statement).to eq([["#{Time.now.strftime("%d/%m/%Y")} || 10 || || 10"]])
   end
 
   it "can store a withdrawal in the statement" do
     bank.deposit(10)
     bank.withdraw(5)
-    expect(bank.statement).to eq([["#{Time.now.strftime("%d/%m/%Y")} || 10 || 10"], ["#{Time.now.strftime("%d/%m/%Y")} || 5 || 5"]])
+    expect(bank.statement).to eq([["#{Time.now.strftime("%d/%m/%Y")} || 10 || || 10"], ["#{Time.now.strftime("%d/%m/%Y")} || || 5 || 5"]])
   end
 
 

@@ -14,7 +14,7 @@ class Bank
   end
 
   def print_statement
-    puts "date || credit/debit || balance"
+    puts "date   || cred/deb || balance"
     @statement.each do |entry|
       puts entry.each { |p| p}
     end
@@ -22,20 +22,20 @@ class Bank
 
   def deposit(amount)
     @balance += amount
-    @statement << ["#{time_stamp(amount)} || #{@balance}"]
+    @statement << ["#{time_stamp} || #{amount} || || #{@balance}"]
     amount
   end
 
   def withdraw(amount)
     @balance -= amount
-    @statement << ["#{time_stamp(amount)} || #{@balance}"]
+    @statement << ["#{time_stamp} || || #{amount} || #{@balance}"]
     amount
   end
 
   private
 
-    def time_stamp(amount)
-      "#{Time.now.strftime("%d/%m/%Y")} || #{amount}"
+    def time_stamp
+      Time.now.strftime("%d/%m/%Y")
     end
 
 end
