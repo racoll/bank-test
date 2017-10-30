@@ -27,8 +27,10 @@ class Bank
   end
 
   def store_deposit(amount)
-    @statement << amount
+    @statement << time_stamp(amount)
   end
+
+private
 
   def time_stamp(amount)
     "#{amount} : #{Time.now}"
