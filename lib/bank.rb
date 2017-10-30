@@ -28,6 +28,7 @@ class Bank
 
   def store_deposit(amount)
     @statement << time_stamp(amount)
+    amount
   end
 
 private
