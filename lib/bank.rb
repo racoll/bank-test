@@ -23,7 +23,7 @@ class Bank
 
   def withdraw(amount)
     @balance -= amount
-    @statement << time_stamp(amount)
+    @statement << "Withdrew #{time_stamp(amount)}"
     amount
   end
 
