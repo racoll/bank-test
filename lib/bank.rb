@@ -1,9 +1,10 @@
 class Bank
 
-  # attr_reader :balance
+  attr_reader :statement
 
   def initialize
     @balance = 0
+    @statement = []
   end
 
   def balance
@@ -22,6 +23,10 @@ class Bank
 
   def print_statement
     "deposited: #{10}, withdrew: #{5}"
+  end
+
+  def store_deposit(amount)
+    @statement << amount
   end
 
 end
