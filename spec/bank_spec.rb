@@ -14,4 +14,10 @@ RSpec.describe Bank do
     expect(bank.balance).to equal(10)
   end
 
+  it "allows a customer to withdraw an amount" do
+    bank.deposit(10)
+    bank.withdraw(5)
+    expect(bank.balance).to equal(5)
+  end
+
 end
