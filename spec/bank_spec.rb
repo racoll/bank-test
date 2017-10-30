@@ -6,7 +6,12 @@ RSpec.describe Bank do
 
   it "initializes with a balance of zero" do
     # bank = Bank.new
-    expect(bank.current_balance).to equal(0)
+    expect(bank.balance).to equal(0)
+  end
+
+  it "allows a customer to deposit an amount" do
+    bank.deposit(10)
+    expect(bank.balance).to equal(10)
   end
 
 end

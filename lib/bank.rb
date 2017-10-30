@@ -1,11 +1,15 @@
 class Bank
 
   def initialize
-    @initial_balance = 0
+    @balance = 0
   end
 
-  def current_balance
-    0
+  def balance
+    @balance
   end
-  
+
+  def deposit(amount)
+    @balance += amount
+  end
+
 end
