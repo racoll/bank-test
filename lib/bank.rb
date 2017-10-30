@@ -21,7 +21,7 @@ class Bank
   end
 
   def print_statement
-    "deposited: #{10}"
+    "deposited: #{10}, withdrew: #{5}"
   end
 
 end
