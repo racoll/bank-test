@@ -40,7 +40,13 @@ RSpec.describe Bank do
   end
 
   it "can store a deposit in the statement" do
-    expect(bank.store_deposit(10)).to eq(["#{10} : #{Time.now}"])
+    bank.deposit(10)
+    expect(bank.statement).to eq(["#{10} : #{Time.now}"])
+  end
+
+  it "can store a withdrawal in the statement" do
+    bank.withdraw(5)
+    expect(bank.statement).to eq(["#{5} : #{Time.now}"])
   end
 
   # it "can attach a time stamp to a deposit" do
