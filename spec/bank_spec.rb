@@ -41,7 +41,7 @@ RSpec.describe Bank do
 
   it "can store a deposit in the statement" do
     bank.deposit(10)
-    expect(bank.statement).to eq(["#{10} : #{Time.now}"])
+    expect(bank.statement).to eq(["Deposited #{10} : #{Time.now}"])
   end
 
   it "can store a withdrawal in the statement" do

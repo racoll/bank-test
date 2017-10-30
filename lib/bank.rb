@@ -11,24 +11,13 @@ class Bank
     @balance
   end
 
-  # def deposit(amount)
-  #   @balance += amount
-  #   @statement << amount
-  #   @balance
-  # end
-  #
-  # def withdraw(amount)
-  #   @balance -= amount
-  #   @balance
-  # end
-
   def print_statement
     "deposited: #{10}, withdrew: #{5}"
   end
 
   def deposit(amount)
     @balance += amount
-    @statement << time_stamp(amount)
+    @statement << "Deposited #{time_stamp(amount)}"
     amount
   end
 

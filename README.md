@@ -41,6 +41,8 @@ DONE
 
 
 3) As a bank customer, so that I can keep track of my bank balance and my spending, I want to be able to print a statement from the bank, showing my balance, having added up deposits and withdrawals.
+DONE
 DIFFERENT CLASS
 
 4) As A bank customer, so that I can determine exactly when I made deposits and withdrawals, I want each deposit and withdrawal to have an associated date.
+DONE
