@@ -1,3 +1,5 @@
+require_relative "statement"
+
 class Bank
 
   attr_reader :statement
@@ -30,7 +32,7 @@ class Bank
   private
 
     def time_stamp(amount)
-      "#{amount} : #{Time.now}"
+      "#{amount} : #{Time.now.strftime("%d/%m/%Y")}"
     end
 
 end

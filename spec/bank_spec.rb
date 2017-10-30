@@ -24,11 +24,6 @@ RSpec.describe Bank do
     expect(bank.balance).to eq(5)
   end
 
-  # it "can print a statement with one deposit" do
-  #   bank.deposit(10)
-  #   expect(bank.print_statement).to eql("deposited: #{10}")
-  # end
-
   it "can print a statement with one deposit and one withdrawal" do
     bank.deposit(10)
     bank.withdraw(5)
@@ -41,16 +36,13 @@ RSpec.describe Bank do
 
   it "can store a deposit in the statement" do
     bank.deposit(10)
-    expect(bank.statement).to eq(["Deposited #{10} : #{Time.now}"])
+    expect(bank.statement).to eq(["Deposited #{10} : #{Time.now.strftime("%d/%m/%Y")}"])
   end
 
   it "can store a withdrawal in the statement" do
     bank.withdraw(5)
-    expect(bank.statement).to eq(["Withdrew #{5} : #{Time.now}"])
+    expect(bank.statement).to eq(["Withdrew #{5} : #{Time.now.strftime("%d/%m/%Y")}"])
   end
 
-  # it "can attach a time stamp to a deposit" do
-  #   expect(bank.time_stamp(10)).to eq("#{10} : #{Time.now}")
-  # end
 
 end
