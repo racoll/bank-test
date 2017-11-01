@@ -14,8 +14,8 @@ RSpec.describe Bank do
   end
 
   it "allows a customer to deposit an amount" do
-    bank.deposit(10)
-    expect(bank.balance).to eq(10)
+    bank.deposit(10) # what is the return value here? what do you want it to do?!
+    expect(bank.balance).to eq(10) # this is using a different method to test it! BAD
   end
 
   it "allows a customer to withdraw an amount" do
