@@ -31,6 +31,9 @@ class Bank
     amount
   end
 
+
+  #  test!
+
   private
 
     def time_stamp # this is creating a time stamp, which is being called in deposit and withdraw methods
