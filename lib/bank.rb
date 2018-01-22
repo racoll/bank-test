@@ -1,3 +1,4 @@
+require_relative "statement"
 
 class Bank
 
